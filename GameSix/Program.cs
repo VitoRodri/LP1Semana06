@@ -2,8 +2,15 @@
 
 namespace GameSix
 {
+    public enum PowerUp 
+    {
+        Health,
+        Shield
+    }
     class Program
     {
+        
+
         static void Main(string[] args)
         {
             Console.WriteLine("Write the number of enemies");
@@ -23,10 +30,34 @@ namespace GameSix
 
             foreach (Foe enemy in enemies)
             {
-                Console.WriteLine(enemy.GetName());
+                Console.WriteLine("Name: "+enemy.GetName());
+                Console.WriteLine("Health: "+enemy.GetHealth());
+                Console.WriteLine("Shield: "+enemy.GetShield());
             }
+
+            foreach (Foe enemy in enemies)
+            {
+                enemy.PickupPowerUp(PowerUp.Health,20);
+                enemy.PickupPowerUp(PowerUp.Shield,20);
+                Console.WriteLine("Name: "+enemy.GetName());
+                Console.WriteLine("Health: "+enemy.GetHealth());
+                Console.WriteLine("Shield: "+enemy.GetShield());
+            }
+            foreach (Foe enemy in enemies)
+            {
+                enemy.TakeDamage(20);
+                Console.WriteLine("Name: "+enemy.GetName());
+                Console.WriteLine("Health: "+enemy.GetHealth());
+                Console.WriteLine("Shield: "+enemy.GetShield());
+            }
+
+        
+
+
 
             
         }
+
+
     }
 }

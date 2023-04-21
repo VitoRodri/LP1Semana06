@@ -7,6 +7,7 @@ namespace GameSix
         private string name;
         private float health;
         private float shield;
+        
 
         public string GetName()
         {
@@ -44,6 +45,30 @@ namespace GameSix
         public void SetName(string name)
         {
             this.name=name.Trim();
+        }
+
+        public void PickupPowerUp(PowerUp power, float a)
+        {
+            if ((health<100) && (power==PowerUp.Health))
+            {
+                
+                health+=a;
+                
+            }
+
+            else if ((shield<100) && (power==PowerUp.Shield))
+            {
+                shield+=a;
+            }
+
+            if (health>100)
+            {
+                health=100;
+            }
+            if (shield>100)
+            {
+                shield=100;
+            }
         }
 
 
