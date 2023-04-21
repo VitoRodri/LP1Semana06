@@ -10,6 +10,7 @@ namespace GameSix
 
         public string GetName()
         {
+            SetName(name);
             return name;
         }
         public float GetHealth()
