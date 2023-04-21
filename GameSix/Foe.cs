@@ -12,6 +12,14 @@ namespace GameSix
         {
             return name;
         }
+        public float GetHealth()
+        {
+            return health;
+        }
+        public float GetShield()
+        {
+            return shield;
+        }
     
         public Foe(string name)
         {
@@ -30,6 +38,11 @@ namespace GameSix
                 health -= damageStillToInflict;
                 if (health<0) health=0;
             }
+        }
+
+        public void SetName(string name)
+        {
+            this.name=name.Trim();
         }
 
 
