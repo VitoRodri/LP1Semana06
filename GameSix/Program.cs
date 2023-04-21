@@ -49,7 +49,10 @@ namespace GameSix
                 Console.WriteLine("Name: "+enemy.GetName());
                 Console.WriteLine("Health: "+enemy.GetHealth());
                 Console.WriteLine("Shield: "+enemy.GetShield());
+                Console.WriteLine("powerups: "+enemy.GetPower());
             }
+
+            
 
         
 

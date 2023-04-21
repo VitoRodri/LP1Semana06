@@ -4,6 +4,7 @@ namespace GameSix
 {
     public class Foe 
     {
+        private static int powerups;
         private string name;
         private float health;
         private float shield;
@@ -21,6 +22,10 @@ namespace GameSix
         public float GetShield()
         {
             return shield;
+        }
+        public string GetPower()
+        {
+            return Convert.ToString( powerups);
         }
     
         public Foe(string name)
@@ -69,6 +74,7 @@ namespace GameSix
             {
                 shield=100;
             }
+            powerups++;
         }
 
 
